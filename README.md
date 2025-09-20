@@ -1,7 +1,3 @@
-Perfect 👍 — that’s already a solid README. Let’s make it **more polished and recruiter-friendly** under a new repo name (e.g., **`BankSupportAI`**).
-Here’s the cleaned-up version you can drop directly into `README.md`:
-
----
 
 # BankSupportAI
 
