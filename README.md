@@ -1,72 +1,92 @@
-# **Banking Customer Support System**
+Perfect 👍 — that’s already a solid README. Let’s make it **more polished and recruiter-friendly** under a new repo name (e.g., **`BankSupportAI`**).
+Here’s the cleaned-up version you can drop directly into `README.md`:
 
-This repository implements a sophisticated chatbot system designed for banking customer support, featuring a user-friendly interface built with Streamlit, intent classification powered by sentence transformers, and advanced contextual response generation using the Gemini LLM. The system aims to enhance customer interaction by providing accurate and contextually relevant responses through both text and audio outputs.
+---
 
-## **Key Features:**
+# BankSupportAI
 
-- **Speech Recognition:** Utilizes OpenAI Whisper for efficient transcription of user audio inputs.
-- **Intent Classification:** Employs sentence embeddings and cosine similarity to classify user queries into predefined intents, ensuring accurate identification of user needs.
-- **Contextual Response Generation:** Leverages Gemini LLM with integrated chat history memory to deliver informative and context-aware responses, enhancing customer experience.
-- **Text-to-Speech Output:** Converts chatbot responses into audio using gTTS, allowing for seamless, natural interactions.
+An intelligent chatbot system for **banking customer support**, built with **Streamlit**, **OpenAI Whisper**, **Sentence Transformers**, and the **Gemini LLM**.  
+The system enhances customer interactions by providing accurate, contextually relevant responses through both **text** and **audio** outputs.
 
-## **Installation:**
+---
 
-1. **Clone the Repository:**
+## 🚀 Key Features
+- **Speech Recognition** – transcribe user audio inputs with OpenAI Whisper  
+- **Intent Classification** – classify queries using sentence embeddings + cosine similarity  
+- **Contextual Response Generation** – generate informed replies with Gemini LLM and chat history memory  
+- **Text-to-Speech Output** – convert chatbot responses into natural audio via gTTS  
 
+---
+
+## ⚙️ Installation
+
+1. **Clone the repository**
 ```bash
-git clone https://github.com/your-repo/banking-chatbot.git
-```
+git clone https://github.com/your-username/BankSupportAI.git
+cd BankSupportAI
+````
 
-2. **Create a Virtual Environment (Recommended):**
+2. **Create a virtual environment (recommended)**
 
 ```bash
 python -m venv env
-source env/bin/activate  # On Windows, use `env\Scripts\activate`
+source env/bin/activate  # On Windows: env\Scripts\activate
 ```
 
-3. **Install Dependencies:**
+3. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Set Up API Key:**
-
-Add your OpenAI API key to a `.env` file:
+4. **Set up API key**
+   Add your OpenAI API key to a `.env` file:
 
 ```bash
 OPENAI_API_KEY="your_openai_api_key"
 ```
 
-## **Usage:**
+---
 
-1. **Run the Application:**
+## ▶️ Usage
+
+1. **Run the application**
 
 ```bash
 streamlit run app.py
 ```
 
-2. **Interact with the Chatbot:**
-   - Type your question or message in the provided text field.
-   - Optionally, click the microphone icon to record your audio query.
+2. **Interact with the chatbot**
 
-## **Code Structure:**
+* Type your question or message in the input field
+* Optionally, click the microphone icon to record an audio query
 
-- **`app.py`:** Manages the main application logic, handles user input through the Streamlit interface, and coordinates chatbot interactions.
-- **`chatbot.py`:** Defines the `ChatBot` class responsible for generating responses via LLMChain and classifying intents using sentence transformers.
-- **`audio_utils.py`:** Provides functionality for transcribing audio (using OpenAI Whisper), converting text to speech (using gTTS), and playing audio responses in the Streamlit app.
+---
 
-## **Technical Details:**
+## 📂 Code Structure
 
-### **Intent Classification:**
-- Sentence embeddings are generated using a pre-trained sentence transformer model for both user inputs and predefined intents.
-- Cosine similarity is calculated between the embeddings of the user query and intent dataset to determine the most relevant intent.
+* **`app.py`** – main app logic, Streamlit UI, chatbot coordination
+* **`chatbot.py`** – defines the `ChatBot` class with LLMChain and intent classification
+* **`audio_utils.py`** – handles transcription (Whisper), text-to-speech (gTTS), and audio playback
+* **`intent.csv` / `intent_embeddings.csv`** – predefined intents and embeddings dataset
 
-### **Chatbot Response Generation:**
-- A `ChatBot` instance integrates an `LLMChain` object with a custom prompt template.
-- The system uses the chat history and user query to generate a context-aware response, aligned with the classified intent.
+---
 
-### **Audio Processing:**
-- **Speech Transcription:** OpenAI Whisper is used to convert speech input into text.
-- **Text-to-Speech Conversion:** The `gTTS` library generates audio responses, saving them as WAV files, which are then played back within the Streamlit app for seamless interaction.
+## 🔍 Technical Details
 
+### Intent Classification
+
+* Uses sentence transformer embeddings for both queries and intents
+* Cosine similarity selects the most relevant intent
+
+### Chatbot Response Generation
+
+* `ChatBot` integrates with `LLMChain` and a custom prompt template
+* Responses are context-aware, leveraging chat history + intent classification
+
+### Audio Processing
+
+* **Transcription:** OpenAI Whisper converts audio → text
+* **Text-to-Speech:** gTTS generates WAV responses, played in Streamlit
+
+---
